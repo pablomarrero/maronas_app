@@ -1,22 +1,22 @@
-<%- model_class = Promo -%>
+<%- model_class = Promotion -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @promo.name %></dd>
+  <dd><%= @promotion.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:descripcion) %>:</strong></dt>
-  <dd><%= @promo.descripcion %></dd>
+  <dd><%= @promotion.descripcion %></dd>
 </dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              promos_path, :class => 'btn'  %>
+              promotions_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_promo_path(@promos), :class => 'btn' %>
+              edit_promotion_path(@promotions), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              promos_path(@promos),
+              promotions_path(@promotions),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>

@@ -43,11 +43,6 @@ ActiveRecord::Schema.define(version: 20141106114736) do
     t.datetime "updated_at"
   end
 
-  create_table "servicios", force: true do |t|
-    t.string "name"
-    t.text   "descripcion"
-  end
-
   create_table "slots", force: true do |t|
     t.string   "name"
     t.string   "opentimes"
@@ -55,11 +50,6 @@ ActiveRecord::Schema.define(version: 20141106114736) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "slots_promos", id: false, force: true do |t|
-    t.integer "slot_id"
-    t.integer "promo_id"
   end
 
   create_table "users", force: true do |t|

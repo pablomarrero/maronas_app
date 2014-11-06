@@ -1,19 +1,59 @@
 <%- model_class = Slot -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1><%=t '.title' %></h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dt><strong><%= t '.name' %>:</strong></dt>
   <dd><%= @slot.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:opentimes) %>:</strong></dt>
+  <dt><strong><%= t '.opentimes' %>:</strong></dt>
   <dd><%= @slot.opentimes %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dt><strong><%= t '.address' %>:</strong></dt>
   <dd><%= @slot.address %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dt><strong><%= t '.description' %>:</strong></dt>
   <dd><%= @slot.description %></dd>
 </dl>
 
+<%= field_set_tag t '.promotions', :class => 'well well_2D' do %>
+  <div class="row-fluid">
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+          <th width = '50%'><%= t('.promotions_name') %></th>
+          <th width = '50%'><%= t('.promotions_description') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @slot.promotions.each do |promo| %>
+          <tr>
+            <td><%= promo.name %></td>
+            <td><%= promo.description %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
+<%= field_set_tag t '.services', :class => 'well well_2D' do %>
+  <div class="row-fluid">
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+          <th width = '50%'><%= t('.services_name') %></th>
+          <th width = '50%'><%= t('.services_description') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @slot.services.each do |service| %>
+          <tr>
+            <td><%= service.name %></td>
+            <td><%= service.description %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               slots_path, :class => 'btn'  %>

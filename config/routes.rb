@@ -1,4 +1,8 @@
 MaronasApp::Application.routes.draw do
+  resources :promotions
+
+  resources :services
+
   devise_for :users
   resources :slots
   resources :servicios

@@ -1,28 +1,28 @@
 class PromotionsController < ApplicationController
   before_action :set_promotion, only: [:show, :edit, :update, :destroy]
 
-  # GET /slots
-  # GET /slots.json
+  # GET /promotions
+  # GET /promotions.json
   def index
     @promotions = Promotion.all
   end
 
-  # GET /slots/1
-  # GET /slots/1.json
+  # GET /promotions/1
+  # GET /promotions/1.json
   def show
   end
 
-  # GET /slots/new
+  # GET /promotions/new
   def new
     @promotion = Promotion.new
   end
 
-  # GET /slots/1/edit
+  # GET /promotions/1/edit
   def edit
   end
 
-  # POST /slots
-  # POST /slots.json
+  # POST /promotions
+  # POST /promotions.json
   def create
     @promotion = Promotion.new(promotion_params)
 
@@ -37,8 +37,8 @@ class PromotionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /slots/1
-  # PATCH/PUT /slots/1.json
+  # PATCH/PUT /promotions/1
+  # PATCH/PUT /promotions/1.json
   def update
     respond_to do |format|
       if @promotion.update(promotion_params)
@@ -51,12 +51,12 @@ class PromotionsController < ApplicationController
     end
   end
 
-  # DELETE /servicios/1
-  # DELETE /servicios/1.json
+  # DELETE /promotions/1
+  # DELETE /promotions/1.json
   def destroy
     @promotion.destroy
     respond_to do |format|
-      format.html { redirect_to promotion_url }
+      format.html { redirect_to promotions_url }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class PromotionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def promotion_params
-      params.require(:promotion).permit(:name,:descripcion)
+      params[:promotion],permit(:name,:description)
     end
 end

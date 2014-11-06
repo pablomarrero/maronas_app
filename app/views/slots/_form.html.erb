@@ -23,16 +23,17 @@
       <%= f.text_field :description, :class => 'text_field' %>
     </div>
   </div>
-  <div class="form-actions">
-  <%= f.fields_for :promotions do |exp| %>
-             <%= render 'promotion_fields', :f => exp %>
-  <% end %>
-
+  <div class="control-group">
+		<%= f.fields_for :promotions do |exp| %><%= render 'promotion_fields', :f => exp %><% end %>
+  </div>		
+  <div class="control-group">
+	<%= f.fields_for :services do |exp| %><%= render 'service_fields', :f => exp %><% end %>
   </div>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 slots_path, :class => 'btn' %>
-    <%= link_to_add_association 'New Promotion', f, :promotions, :class => 'btn'%>				
+    <%= link_to_add_association 'New Promotion', f, :promotions, :class => 'btn'%>		
+	<%= link_to_add_association 'New Service', f, :services, :class => 'btn'%>	
   </div>
 <% end %>

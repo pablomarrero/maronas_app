@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028022934) do
+ActiveRecord::Schema.define(version: 20141106114736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "promotions", force: true do |t|
+    t.string   "name"
+    t.integer  "slot_id"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -27,6 +35,19 @@ ActiveRecord::Schema.define(version: 20141028022934) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
 
+  create_table "services", force: true do |t|
+    t.string   "name"
+    t.integer  "slot_id"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "servicios", force: true do |t|
+    t.string "name"
+    t.text   "descripcion"
+  end
+
   create_table "slots", force: true do |t|
     t.string   "name"
     t.string   "opentimes"
@@ -34,6 +55,11 @@ ActiveRecord::Schema.define(version: 20141028022934) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "slots_promos", id: false, force: true do |t|
+    t.integer "slot_id"
+    t.integer "promo_id"
   end
 
   create_table "users", force: true do |t|

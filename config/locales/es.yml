@@ -4,7 +4,7 @@ es:
   logout: "Logout"
   change_password: Cambiar mi Contraseña
   login: Login
-  signin: "Login"
+  singin: "Login"
   update: Modificar
   save: Guardar
   view: Ver
@@ -26,6 +26,7 @@ es:
   access_denied: Usted no esta autorizado a ingresar a esa Página
   session_already_destroy: Usted ya se ha deslogueado del sistema
 
+
   slots_link: Slots
   views:
     pagination:
@@ -36,8 +37,17 @@ es:
       last: último
       truncate: "<span>...</span>"
   slots:
-    show:
-      title: Listado de Slots
+    index:
+      title: Lista de Slots
+      Id: Identificador
+      name: Nombre
+      opentimes: Horarios
+      address: Dirección 
+      description: Descripción	
+      created_at: Fecha Creación	  
+    new:
+      title: Nuevo Slot
+    form:
       name: Nombre
       opentimes: Horarios
       address: Dirección
@@ -46,13 +56,9 @@ es:
       promotions_name: Nombre
       promotions_description: Descripción
       services_name: Nombre
-      services_description: Descripción
-
-
-
-
-
-
+      services_description: Descripción  
+      description: Descripción	
+      created_at: Fecha Creación	  
 
 
   date:

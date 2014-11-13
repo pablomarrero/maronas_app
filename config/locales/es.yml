@@ -37,6 +37,7 @@ es:
       last: último
       truncate: "<span>...</span>"
   slots:
+    name: Nombre
     index:
       title: Lista de Slots
       Id: Identificador
@@ -55,12 +56,16 @@ es:
       services: Servicios
       promotions_name: Nombre
       promotions_description: Descripción
+      promotion_message: Promociones Disponibles
       services_name: Nombre
       services_description: Descripción  
+      services_message: Servicios Disponibles	  
       description: Descripción	
       created_at: Fecha Creación	  
-
-
+      new_promotion: Agregar Promocion
+      new_service: Agregar Servicio	
+      new_slot: Agregar Slot	
+      cancel: Cancelar	  
   date:
     abbr_day_names:
     - dom
@@ -204,6 +209,7 @@ es:
       create: Crear %{model}
       submit: Guardar %{model}
       update: Actualizar %{model}
+
   number:
     currency:
       format:

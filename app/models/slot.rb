@@ -16,4 +16,6 @@ class Slot < ActiveRecord::Base
   accepts_nested_attributes_for :promotions, :reject_if => :all_blank, :allow_destroy => true
   has_many :services
   accepts_nested_attributes_for :services, :reject_if => :all_blank, :allow_destroy => true
+  has_many :shows
+  accepts_nested_attributes_for :shows, :reject_if => :all_blank, :allow_destroy => true  
 end

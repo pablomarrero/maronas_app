@@ -54,6 +54,26 @@
     </table>
   </div>
 <% end %>
+<%= field_set_tag t '.shows', :class => 'well well_2D' do %>
+  <div class="row-fluid">
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+          <th width = '50%'><%= t('.shows_name') %></th>
+          <th width = '50%'><%= t('.shows_description') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @slot.shows.each do |show| %>
+          <tr>
+            <td><%= show.name %></td>
+            <td><%= show.description %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               slots_path, :class => 'btn'  %>

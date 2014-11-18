@@ -55,17 +55,21 @@ es:
       services: Servicios
       promotions_name: Nombre
       promotions_description: Descripción
-      promotion_message: Promociones asignadas al Slot
+      promotion_message: Promociones disponibles en el local (Slot)
       services_name: Nombre
       services_description: Descripción  
-      services_message: Servicios asignados al Slot 
+      services_message: Servicios disponibles en el local (Slot) 
+      shows_name: Nombre
+      shows_description: Descripción  
+      shows_message: Shows disponibles en el local (Slot) 	  
       description: Descripción	
       created_at: Fecha Creación	  
       new_promotion: Agregar Promocion
       new_service: Agregar Servicio	
+      new_show: Agregar Show	
       new_slot: Agregar Slot	
       cancel: Cancelar	
- 
+
   date:
     abbr_day_names:
     - dom

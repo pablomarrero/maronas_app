@@ -1,4 +1,6 @@
 MaronasApp::Application.routes.draw do
+  resources :shows
+
   resources :promotions
 
   resources :services

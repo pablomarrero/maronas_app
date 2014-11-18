@@ -69,6 +69,6 @@ class SlotsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def slot_params
-      params.require(:slot).permit(:name, :opentimes, :address, :description, promotions_attributes: [:id, :name, :description, :_destroy],services_attributes: [:id, :name, :description, :_destroy])
+      params.require(:slot).permit(:name, :opentimes, :address, :description, promotions_attributes: [:id, :name, :description, :_destroy],services_attributes: [:id, :name, :description, :_destroy],shows_attributes: [:id, :name, :description, :_destroy])
     end
 end

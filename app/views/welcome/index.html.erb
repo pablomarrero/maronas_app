@@ -1,12 +1,15 @@
-<div class="scontainer-fluid">
+<div class="container-fluid">
   <div class="row-fluid">
     <div class="span3 principal" style="padding: 0;">
       <div class="row-fluid" style="text-align:center;">
-        <%= image_tag 'menu_izq.png'%>
+        <%= image_tag 'menu_izq.png' , size: '90%' %>
       </div>
       <div class="row-fluid">
         <div class="span4">
-          <%=image_tag 'botones-01.png', class: 'botonera'%>
+          <%= link_to slots_path do %>
+            <%=image_tag 'botones-01.png', class: 'botonera'%>
+          <%end%>
+          
         </div>
         <div class="span4">
           <%=image_tag 'botones-02.png', class: 'botonera'%>
@@ -26,15 +29,25 @@
           <%=image_tag 'botones-06.png', class: 'botonera'%>
         </div>
       </div>
+      <div class = "row-fluid">
+        <div class="span1">
+          <%= image_tag 'iconos inferiores-01.png' %>
+         </div>
+         <div class="span1 offset7">
+            <%= link_to new_user_session_path do %>
+              <%= image_tag 'iconos inferiores-06.png' %>
+            <%end%> -->
+         </div>
+      </div>      
     </div>
-    <div class="span9 principal" style="margin: 0;">
+    <div class="span9 container-fluid" style="margin: 0;">
       <div class="row-fluid" style="text-align:center;">
         <%= image_tag 'entertainment.png', size: '300x300'%>
       </div>
       <div class="row-fluid" style="text-align:center;">
         <%= image_tag 'menu_der.png', class: 'image_principal'%>
       </div>
-      <div class="row-fluid" style="text-align:center;">
+      <<div class="row-fluid" style="text-align:center;">
         <p style="color: white;">askfjsklfjsklfjsklfjasdkfjsdlkfjsdlkfjsdlkfjasdlkfjasdlkfjasdkfjasdflkasdjfalkdsjf</p>
       </div>
     </div>

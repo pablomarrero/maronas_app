@@ -1,25 +1,20 @@
-<h1>Listing services</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @services.each do |service| %>
-      <tr>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Service', new_service_path %>
+<%- model_class = Service -%>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3 principal" style="padding: 0;">
+      <div class="row-fluid" style="text-align:center;">
+        <%= image_tag 'servicios_izq.png' , size: '90%' %>
+      </div>
+      <div class="row-fluid">
+        <table class="table table-striped span9">
+            <tbody>
+              <% @services.each do |service| %>
+                <tr>
+                  <td class="span12 lista" style="margin:1px , padding: 1"><%= service.name %></td>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>     
+    </div>
+  </div>
+</div>

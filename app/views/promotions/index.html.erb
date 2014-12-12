@@ -1,25 +1,20 @@
-<h1>Listing promotions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @promotions.each do |promotion| %>
-      <tr>
-        <td><%= link_to 'Show', promotion %></td>
-        <td><%= link_to 'Edit', edit_promotion_path(promotion) %></td>
-        <td><%= link_to 'Destroy', promotion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Promotion', new_promotion_path %>
+<%- model_class = Promotion -%>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3 principal" style="padding: 0;">
+      <div class="row-fluid" style="text-align:center;">
+        <%= image_tag 'promos_izq.png' , size: '90%' %>
+      </div>
+      <div class="row-fluid">
+        <table class="table table-striped span9">
+            <tbody>
+              <% @promotions.each do |promotion| %>
+                <tr>
+                  <td class="span12 lista" style="margin:1px , padding: 1"><%= promotion.name %></td>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>     
+    </div>
+  </div>
+</div>

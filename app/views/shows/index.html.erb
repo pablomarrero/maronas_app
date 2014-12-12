@@ -1,25 +1,20 @@
-<h1>Listing shows</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @shows.each do |show| %>
-      <tr>
-        <td><%= link_to 'Show', show %></td>
-        <td><%= link_to 'Edit', edit_show_path(show) %></td>
-        <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Show', new_show_path %>
+<%- model_class = Show -%>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3 principal" style="padding: 0;">
+      <div class="row-fluid" style="text-align:center;">
+        <%= image_tag 'shows_izq.png' , size: '90%' %>
+      </div>
+      <div class="row-fluid">
+        <table class="table table-striped span9">
+            <tbody>
+              <% @shows.each do |show| %>
+                <tr>
+                  <td class="span12 lista" style="margin:1px , padding: 1"><%= show.name %></td>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>     
+    </div>
+  </div>
+</div>

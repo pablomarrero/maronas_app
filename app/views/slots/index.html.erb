@@ -13,7 +13,7 @@
             <tbody>
               <% @slots.each do |slot| %>
                 <tr>
-                  <td class="span12 lista" style="margin:1px , padding: 1"><%= slot.name %></td>
+                  <td class="span12 lista" style="margin:1px , padding: 1"><%= link_to slot.name, slot_external_path(slot) %></td>
                 </tr>
               <% end %>
             </tbody>

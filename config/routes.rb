@@ -1,6 +1,6 @@
 MaronasApp::Application.routes.draw do
   resources :shows
-
+  get 'slots_ext/:id' => 'slots#show_external', as: :slot_external
   resources :promotions
 
   resources :services

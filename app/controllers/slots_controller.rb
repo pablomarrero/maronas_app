@@ -1,6 +1,6 @@
 class SlotsController < ApplicationController
-  before_action :set_slot, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user , except: [:index]
+  before_action :set_slot, only: [:show, :edit, :update, :destroy, :show_external]
+  before_filter :authenticate_user! , except: [:index, :show, :show_external]
   # GET /slots
   # GET /slots.json
   def index
@@ -12,6 +12,9 @@ class SlotsController < ApplicationController
   def show
   end
 
+  def show_external
+    
+  end
   # GET /slots/new
   def new
     @slot = Slot.new
